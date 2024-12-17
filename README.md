@@ -1,6 +1,6 @@
 # Tapsi Food Product Shop
 
-A Vue 3 + TypeScript application that allows you to add and remove products connected to a mock server. It demonstrates best practices, including clean code organization, composables, a service layer, lazy loading for images, automatic component imports, environment-based configuration, and containerization via Docker.
+A Vue 3 + TypeScript application that allows you to add and remove products connected to a mock server. It demonstrates best practices, including clean code organization, composables, a service layer, lazy loading for images, automatic component imports, environment-based configuration
 
 # Features
 *	Vue 3 & TypeScript: Ensures robust type checking and modern component architecture.
@@ -11,14 +11,13 @@ A Vue 3 + TypeScript application that allows you to add and remove products conn
 *	Axios Instance: Centralized axios configuration for consistent API requests.
 *	Auto-Import Components: Reduces boilerplate code by automatically importing used components.
 *	Aliases: Custom aliases (@, @composables) simplify import paths.
-*	Dockerized: Easily containerize and run the application in a production-like environment.
 
 # Getting Started
 
 Prerequisites
-	•	Node.js (version 16+ recommended)
-	•	pnpm installed globally (npm install -g pnpm or corepack enable if using Corepack)
-	•	json-server for the mock backend
+-	Node.js (version 16+ recommended)
+-	pnpm installed globally (npm install -g pnpm or corepack enable if using Corepack)
+-	json-server for the mock backend
 
 Installation
 
@@ -52,19 +51,6 @@ Preview the Production Build
 
 ```bash
 pnpm run preview
-```
-
-## Dockerization
-
-The included Dockerfile uses a multi-stage build process with pnpm:
-	1.	Build Stage: Compiles the app using pnpm.
-	2.	Nginx Stage: Serves the compiled dist files.
-
-To build and run the Docker image:
-
-```bash
-docker build -t tapsi-food-app .
-docker run -p 8080:80 tapsi-food-app
 ```
 
 ## Key Files and Responsibilities
