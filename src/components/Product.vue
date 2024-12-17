@@ -1,18 +1,38 @@
 <template>
   <div class="product-item">
-    <img class="product-item__image" :src="productImage" @error="fallback.png" width="120px" height="120px">
+    <img
+      class="product-item__image"
+      :src="productImage"
+      loading="lazy"
+      @error="onError"
+      width="120px"
+      height="120px"
+    />
     <strong class="product-item__name">{{ productName }}</strong>
-    <input class="product-item__checkbox" type="checkbox"/>
+    <input class="product-item__checkbox" type="checkbox" v-model="selected" />
   </div>
 </template>
 
 <script setup lang="ts">
-interface IProps {
+import { defineProps, ref, watch } from "vue";
+
+interface Props {
   productName: string;
   productImage: string;
+  modelValue?: boolean;
 }
-defineProps<IProps>();
 
+const props = defineProps<Props>();
+const emit = defineEmits(["update:modelValue"]);
+
+const selected = ref(props.modelValue ?? false);
+
+watch(selected, (newVal) => {
+  emit("update:modelValue", newVal);
+});
+
+const onError = "https://via.placeholder.com/120";
+}
 </script>
 
 <style lang="scss" scoped>
