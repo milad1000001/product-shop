@@ -31,6 +31,5 @@
 
 <script setup lang="ts">
 import { useProducts } from "@composables/useProducts";
-const { products, loading, error, addProduct, deleteSelectedProducts } =
-  useProducts();
+const { products, loading, error, addProduct, deleteSelectedProducts } = useProducts();
 </script>

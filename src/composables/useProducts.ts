@@ -28,6 +28,7 @@ export function useProducts() {
       products.value.push({ ...product, selected: false });
     } catch (err: any) {
       error.value = 'Failed to add product';
+      throw err;
     } finally {
       loading.value = false;
     }
@@ -42,6 +43,7 @@ export function useProducts() {
       products.value = products.value.filter(p => !selectedIds.includes(p.id));
     } catch (err: any) {
       error.value = 'Failed to delete products';
+      throw err;
     } finally {
       loading.value = false;
     }
