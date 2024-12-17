@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "base64Image": "https://via.placeholder.com/120",
+      "description": "Sample product 1",
+      "price": 10,
+      "strikePrice": 15,
+      "title": "Product 1"
+    },
+    {
+      "id": "2",
+      "base64Image": "https://via.placeholder.com/120",
+      "description": "Sample product 2",
+      "price": 20,
+      "strikePrice": 25,
+      "title": "Product 2"
+    },
+    {
+      "id": "22c8fcc7-aa75-4361-8a67-ab486ddc794a",
+      "base64Image": "https://via.placeholder.com/120",
+      "description": "",
+      "price": 0,
+      "strikePrice": 0,
+      "title": "asd"
+    },
+    {
+      "id": "ed1f8705-833e-4f37-8951-e96ebc13e864",
+      "base64Image": "https://via.placeholder.com/120",
+      "description": "",
+      "price": 0,
+      "strikePrice": 0,
+      "title": "qweqwe"
+    }
+  ]
+}
